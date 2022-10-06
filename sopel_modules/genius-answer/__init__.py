@@ -50,7 +50,8 @@ def genius_bot_answer(line):
 
 def setup(bot):
     genius_token = bot.config.genius.api_key
-    global genius = lyricsgenius.Genius(genius_token)
+    global genius
+    genius = lyricsgenius.Genius(genius_token)
     genius.remove_section_headers = True
 
 def sentence_responder(bot, trigger):
