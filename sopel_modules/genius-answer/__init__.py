@@ -6,10 +6,6 @@ import lyricsgenius
 from sopel import plugin
 from sopel.config import types
 
-genius_token = bot.config.genius.api_key
-genius = lyricsgenius.Genius(genius_token)
-genius.remove_section_headers = True
-
 def get_two_words_in_text(text):
     splitted = text.split()
     for word in splitted:
@@ -52,6 +48,11 @@ def genius_bot_answer(line):
     return answer
 
 @plugin.rule(r'(.*\b)+($nickname)[ :,](.*)')
+
+genius_token = bot.config.genius.api_key
+genius = lyricsgenius.Genius(genius_token)
+genius.remove_section_headers = True
+
 def sentence_responder(bot, trigger):
     message = trigger.group(1) + trigger.group(3)
     response = genius_bot_answer(message)
