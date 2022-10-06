@@ -24,7 +24,7 @@ def get_two_words_in_text(text):
         words = splitted[0] + " " + splitted[1]
     elif length == 1:
         words = splitted [0]
-    else
+    else:
         # TODO improve the noise here
         words = "salut"
     return words
