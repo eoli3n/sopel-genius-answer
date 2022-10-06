@@ -4,7 +4,7 @@ A sopel plugin (irc-bot) to answer with a quote from rapgenius.com
 ### Install genius-answer plugin
 
 ```bash
-$ pip install genius-answer
+$ pip install sopel_modules.genius-answer
 ```
 
 ### Configure genius-answer
