@@ -49,7 +49,7 @@ def genius_bot_answer(line):
 
 @plugin.rule(r'(.*\b)+($nickname)[ :,](.*)')
 
-genius_token = bot.config.genius.api_key
+genius_token = sopel.config.genius.api_key
 genius = lyricsgenius.Genius(genius_token)
 genius.remove_section_headers = True
 
