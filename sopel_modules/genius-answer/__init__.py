@@ -5,10 +5,9 @@ import re
 import lyricsgenius
 from sopel import plugin
 
-def set_genius(configfile):
-    genius_token = bot.config.genius.api_key
-    genius = lyricsgenius.Genius(genius_token)
-    genius.remove_section_headers = True
+genius_token = bot.config.genius.api_key
+genius = lyricsgenius.Genius(genius_token)
+genius.remove_section_headers = True
 
 def get_two_words_in_text(text):
     splitted = text.split()
