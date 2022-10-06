@@ -20,3 +20,6 @@ dynamic = ["version"]
 
 [project.urls]
 "Source code" = "https://github.com/eoli3n/sopel-genius-answer"
+
+[tool.setuptools.packages.find]
+include = ["sopel_modules"]     
