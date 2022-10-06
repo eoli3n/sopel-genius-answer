@@ -1,0 +1,22 @@
+[build-system]
+requires = [
+    "setuptools >= 61",
+    "setuptools_scm >= 6.4"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sopel_modules.genius-answer"
+description = "A microframework for network oriented applications"
+readme = "README.rst"
+authors = [{name = "eoli3n", email = "eoli3n@runbox.com"}]
+license = {text = "WTFPL"}
+requires-python = ">=3.8"
+dependencies = [
+    "sopel>=7.1,<8",
+    "lyricsgenius>=3.0.1,<4"
+]
+dynamic = ["version"]
+
+[project.urls]
+"Source code" = "https://github.com/eoli3n/sopel-genius-answer"
