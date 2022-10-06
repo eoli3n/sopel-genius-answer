@@ -3,7 +3,7 @@
 import random
 import re
 import lyricsgenius
-from sopel import plugin
+from sopel import plugin, config
 
 genius_token = bot.config.genius.api_key
 genius = lyricsgenius.Genius(genius_token)
