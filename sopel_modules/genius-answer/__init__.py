@@ -3,10 +3,9 @@
 import random
 import re
 import lyricsgenius
-from sopel import plugin
-from sopel.config import types
+from sopel import plugin, config
 
-genius_token = sopel.config.genius.api_key
+genius_token = config.genius.api_key
 genius = lyricsgenius.Genius(genius_token)
 genius.remove_section_headers = True
 
