@@ -8,7 +8,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "sopel_modules.genius-answer"
 description = "A microframework for network oriented applications"
-readme = "README.rst"
+readme = "README.md"
 authors = [{name = "eoli3n", email = "eoli3n@runbox.com"}]
 license = {text = "WTFPL"}
 requires-python = ">=3.8"
@@ -22,4 +22,6 @@ dynamic = ["version"]
 "Source code" = "https://github.com/eoli3n/sopel-genius-answer"
 
 [tool.setuptools.packages.find]
-include = ["sopel_modules"]     
+include = ["sopel_modules"]
+
+[tool.setuptools_scm]
