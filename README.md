@@ -1,4 +1,4 @@
-# sopel-genius-answer-sopel
+# sopel-genius-answer
 A sopel plugin (irc-bot) to answer with a quote from rapgenius.com
 
 ### Install genius-answer plugin
