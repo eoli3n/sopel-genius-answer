@@ -14,7 +14,7 @@ def setup(bot):
 def get_two_words_in_text(text):
     splitted = text.split()
     for word in splitted:
-        if not re.match("^[A-Za-z]*$", word):
+        if not re.match("^[A-Za-zÀ-ÿ-.']*$", word):
             splitted.remove(word)
     length = len(splitted)
     if length > 2:
@@ -22,8 +22,11 @@ def get_two_words_in_text(text):
         words = splitted[randomnum] + " " + splitted[randomnum + 1] 
     elif length == 2:
         words = splitted[0] + " " + splitted[1]
-    else:
-        return False
+    elif length == 1:
+        words = splitted [0]
+    else
+        # TODO improve the noise here
+        words = "salut"
     return words
 
 def search_song_by_text(text):
@@ -36,7 +39,7 @@ def search_song_by_text(text):
         "url": hit['result']['url'],
         "song_id": hit['result']['id']
     }
-    return(result)
+    return result
 
 def search_line_by_song(sid):
     text = genius.lyrics(song_id=sid)
@@ -57,4 +60,8 @@ def genius_bot_answer(line):
 def sentence_responder(bot, trigger):
     message = trigger.group(1) + trigger.group(3)
     response = genius_bot_answer(message)
-    bot.reply(response)
+    fallback = "J'ai pas le moral là... je crois que je suis amoureux d'arch_ange et elle ignore mes query"
+    if response:
+        bot.reply(response)
+    else:
+        bot.reply(fallback)
