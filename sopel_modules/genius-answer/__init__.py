@@ -14,7 +14,7 @@ def setup(bot):
 def get_two_words_in_text(text):
     splitted = text.split()
     for word in splitted:
-        if not re.match("^[A-Za-zÀ-ÿ-.']*$", word):
+        if not re.match("^[A-Za-zÀ-ÿ-']*$", word):
             splitted.remove(word)
     length = len(splitted)
     if length > 2:
@@ -59,6 +59,7 @@ def genius_bot_answer(line):
 
 def sentence_responder(bot, trigger):
     message = trigger.group(1) + trigger.group(3)
+    bot.say("message = " + message)
     response = genius_bot_answer(message)
     fallback = "J'ai pas le moral là... je crois que je suis amoureux d'arch_ange et elle ignore mes query"
     if response:
