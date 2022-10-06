@@ -51,8 +51,8 @@ def genius_bot_answer(line):
     answer = search_line_by_song(result['song_id'])
     return answer
 
-@plugin.rule(r'\b$nickname[:,]*\b')
+@plugin.rule(r'(.*\b)+($nickname)[ :,](.*)')
 def sentence_responder(bot, trigger):
-    message = trigger.group(1) + trigger.group(2)
+    message = trigger.group(1) + trigger.group(3)
     response = genius_bot_answer(message)
     bot.reply(response)
