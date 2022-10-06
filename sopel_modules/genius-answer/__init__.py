@@ -55,11 +55,10 @@ def genius_bot_answer(line):
     answer = search_line_by_song(result['song_id'])
     return answer
 
-@plugin.rule(r'(.*\b)+($nickname)[ :,](.*)')
+@plugin.rule(r'(.*\b)($nickname)[ :,](.*)')
 
 def sentence_responder(bot, trigger):
     message = trigger.group(1) + trigger.group(3)
-    bot.say("message = " + message)
     response = genius_bot_answer(message)
     fallback = "J'ai pas le moral là... je crois que je suis amoureux d'arch_ange et elle ignore mes query"
     if response:
