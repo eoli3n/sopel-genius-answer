@@ -45,7 +45,7 @@ def search_line_by_song(sid):
     text = genius.lyrics(song_id=sid)
     text_list = text.split('\n')
     text_length = len(text_list) 
-    randomnum = randomnum = random.randrange(text_length - 1)
+    randomnum = random.randrange(text_length - 1)
     line = text_list[randomnum]
     return line
 
