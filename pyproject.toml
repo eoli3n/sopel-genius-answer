@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "sopel_modules.genius-answer"
-description = "A microframework for network oriented applications"
+description = "A sopel plugin (irc-bot) to answer with a quote from rapgenius.com "
 readme = "README.md"
 authors = [{name = "eoli3n", email = "eoli3n@runbox.com"}]
 license = {text = "WTFPL"}
