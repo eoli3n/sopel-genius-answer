@@ -3,3 +3,5 @@
 - remove () text in answer
 - ignore bots URLs
 - remove "lyrics" title lines
+- fix "MCSonar: c'est pas plutôt MSConar ton nick ?" -> Unexpected error (list index out of range) from bsdsx at 2022-10-07 16:48:11.567226. Message was: MCSonar: c'est pas plutôt MSConar ton nick ?
+- limit to 5 consecutive answer to the same nickname
