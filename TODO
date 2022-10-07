@@ -1,3 +1,4 @@
- - https://sopel.chat/docs/plugin/decorators.html#sopel.plugin.search instead of rule
- - search for a connected nick, and answer to it
- - remove () text in answer
+- https://sopel.chat/docs/plugin/decorators.html#sopel.plugin.search instead of rule
+- search for a connected nick, and answer to it
+- remove () text in answer
+- ignore bots URLs
